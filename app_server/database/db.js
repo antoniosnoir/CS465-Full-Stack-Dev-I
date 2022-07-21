@@ -1,10 +1,10 @@
 const mongoose = require('mongoose');
-const host = process.env.DB_HOST || '127.0.0.1'
+const host = process.env.DB_HOST || '127.0.0.1';
 const dbURI = `mongodb://${host}/travlr`;
 const readLine = require('readLine');
 
 //avoid 'current Server Discovery and Monitoring engine is deprecated'
-mongoose.set('useUnifiedTopology', true );
+mongoose.set("useUnifiedTopology", true );
 
 const connect = () => {
     setTimeout(() => mongoose.connect(dbURI, {
@@ -66,5 +66,7 @@ process.on('SIGTERM', () => {
 
 connect();
 
+//require("./models/travlr");
+
 //bring in the Mongoose schema
-require('./travlr'); // /models/tr
+require("./models/travlr"); // /models/tr
