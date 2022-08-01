@@ -1,8 +1,8 @@
 const request = require('request');
-const { render } = require('../../app');
+//const { render } = require('../../app');
 const apiOptions = {
-    server: 'http://localhost:3000'
-}
+    server: 'http://localhost:3000',
+};
 
 // Render travel list view
 const renderTravelList = (req, res, responseBody) => {
@@ -21,7 +21,7 @@ const renderTravelList = (req, res, responseBody) => {
     res.render('travel', {
         title: pageTitle, 
         trips: responseBody,
-        message
+        message,
     });
 };
 
@@ -48,7 +48,7 @@ const travelList = (req, res) => {
 }
 
 module.exports = {
-    travelList
+    travelList,
 };
 
 //const fs = require('fs');
