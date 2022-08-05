@@ -16,16 +16,16 @@ export class TripDataService {
     return this.http
       .post(this.tripUrl, formData)
       .toPromise()
-      .then((response) => response.json() as Trip[])
+      .then(response => response.json() as Trip[])
       .catch(this.handleError);
   }
 
   public getTrip(tripCode: string): Promise<Trip> {
-    console.log("Inside TripDataService#getdTrip");
+    console.log("Inside TripDataService#getTrip");
     return this.http
       .get(this.tripUrl + tripCode)
       .toPromise()
-      .then((response) => response.json() as Trip)
+      .then(response => response.json() as Trip)
       .catch(this.handleError);
   }
 
@@ -44,7 +44,7 @@ export class TripDataService {
     return this.http
       .put(this.tripUrl + formData.code, formData)
       .toPromise()
-      .then((response) => response.json() as Trip[])
+      .then(response => response.json() as Trip[])
       .catch(this.handleError);
   }
 
