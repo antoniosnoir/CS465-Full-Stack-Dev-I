@@ -5,6 +5,7 @@ import { ReactiveFormsModule } from '@angular/forms';
 
 import { AppComponent } from './app.component';
 import { AppRoutingModule } from './app-router.module';
+import { EditTripComponent } from './edit-trip/edit-trip.component';
 import { TripListingComponent } from './trip-listing/trip-listing.component';
 import { TripCardComponent } from './trip-card/trip-card.component';
 import { TripDataService } from './services/trip-data.service';
@@ -13,6 +14,7 @@ import { AddTripComponent } from './add-trip/add-trip.component';
 @NgModule({
   declarations: [
     AppComponent,
+    EditTripComponent,
     TripListingComponent,
     TripCardComponent,
     AddTripComponent
