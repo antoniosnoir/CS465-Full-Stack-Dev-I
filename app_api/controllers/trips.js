@@ -71,7 +71,7 @@ const tripsAddTrip = async (req, res) => {
 const tripsUpdateTrip = async (req, res) => {
     console.log(req.body);
     Model //model instead of Trip?
-        .findOneAndUpdate({ code: req.params.tripCode },
+        .findOneAndUpdate({ 'code': req.params.tripCode },
         {
           code: req.body.code,
           name: req.body.name,

@@ -35,13 +35,13 @@ export class TripListingComponent implements OnInit {
     this.message = 'Searching for trips';
     this.tripDataService
       .getTrips()
-        .then(foundTrips => {
-          this.message = foundTrips.length > 0 ? '' : 'No trips found';
-          this.trips = foundTrips;
-         });
+      .then(foundTrips => {
+        this.message = foundTrips.length > 0 ? '' : 'No trips found';
+        this.trips = foundTrips;
+      });
    }
 
-   ngOnInit(): void {
+   ngOnInit() { //void { //changed on 8/5
      this.getTrips();
   }
 }

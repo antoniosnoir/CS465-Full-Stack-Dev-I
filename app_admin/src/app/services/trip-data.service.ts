@@ -11,10 +11,10 @@ export class TripDataService {
   private apiBaseUrl = 'http://localhost:3000/api/';
   private tripUrl = `${this.apiBaseUrl}trips/`;
 
-  public addTrip(formData: Trip): Promise<Trip> {
-    console.log("Inside TripDataService#addTrip");
+  public getTrips(): Promise<Trip[]> {
+    console.log('Inside TripDataService#getTrips');
     return this.http
-      .post(this.tripUrl, formData)
+      .get(this.tripUrl)
       .toPromise()
       .then(response => response.json() as Trip[])
       .catch(this.handleError);
@@ -29,10 +29,10 @@ export class TripDataService {
       .catch(this.handleError);
   }
 
-  public getTrips(): Promise<Trip[]> {
-    console.log('Inside TripDataService#getTrips');
+  public addTrip(formData: Trip): Promise<Trip> {
+    console.log("Inside TripDataService#addTrip");
     return this.http
-      .get(this.tripUrl)
+      .post(this.tripUrl, formData)
       .toPromise()
       .then(response => response.json() as Trip[])
       .catch(this.handleError);
