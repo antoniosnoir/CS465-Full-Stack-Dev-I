@@ -70,3 +70,5 @@ connect();
 
 //bring in the Mongoose schema
 require("./models/travlr"); // /models/tr
+//require('./user'); 
+require("./models/user"); 
