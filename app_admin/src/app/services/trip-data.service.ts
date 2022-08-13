@@ -1,4 +1,4 @@
-import { Injectable, Inject } from "@angular/core";
+/*import { Injectable, Inject } from "@angular/core";
 import { Http, Headers } from "@angular/http";
 
 import { Trip } from "../models/trip";
@@ -81,9 +81,9 @@ export class TripDataService {
       .then((response) => response.json() as AuthResponse)
       .catch(this.handleError);
   }
-}
+}*/
 
-/*import { Injectable, Inject } from '@angular/core';
+import { Injectable, Inject } from '@angular/core';
 import { Http } from '@angular/http';
 
 import { AuthResponse } from '../models/authresponse';
@@ -167,4 +167,4 @@ export class TripDataService {
       .catch(this.handleError);
   }
 
-}*/
+}
