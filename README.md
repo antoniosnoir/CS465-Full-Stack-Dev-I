@@ -4,6 +4,7 @@
 
 _"Compare and contrast the types of frontend development you used in your full stack project, including Express HTML, JavaScript, and the single-page application (SPA). Why did the backend use NoSQL MongoDB database?"_
 
+For the frontend portion of this project, we used Angular to create a single-page application. Angular makes use of HTML (for content display), CSS (for styling), and JavaScript (for functionanility) while the backend used Node to make use of the routes, controllers, models, and views, which is why the NoSQL MongoDB database was used.
 
 **Functionality:**
 
